@@ -23,11 +23,14 @@ var containsDuplicate = function(nums) {
     for (let j = i + 1; j<nums.length; j++){
         // store the right pointer variable
         let right = nums[j]
+        // create a conditional to compare if any of the value are the same
+        // if it is return true
         if(left === right){
             return true
            }
     }
   } 
+  // otherwise, return false
   return false
 };
 
