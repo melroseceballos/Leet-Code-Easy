@@ -9,6 +9,7 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
+    // check if the array even contains atleast two numbers
   if(!(nums.length >= 2)) return false
    for(let i=0; i<nums.length; i++ ){
     let left = nums[i];
