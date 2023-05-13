@@ -13,7 +13,9 @@ var containsDuplicate = function(nums) {
   if(!(nums.length >= 2)) return false
   // do the first loop so you may be able to set
   // left pointer variable
+  // make sure it starts from the beginning of the array = 0
    for(let i=0; i<nums.length; i++ ){
+    // store the iteration in the left Pointer variable
     let left = nums[i];
     // start right pointer from the 
     for (let j = i + 1; j<nums.length; j++){
