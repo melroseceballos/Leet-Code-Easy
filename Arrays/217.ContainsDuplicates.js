@@ -12,7 +12,7 @@ var containsDuplicate = function(nums) {
   if(!(nums.length >= 2)) return false
    for(let i=1; i<nums.length; i++ ){
     let left = nums[i];
-    for (let j = left + 1; j<nums.length; j++){
+    for (let j = i + 1; j<nums.length; j++){
         let right = nums[j]
         if(left === right){
             return true
