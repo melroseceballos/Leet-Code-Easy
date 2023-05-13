@@ -18,8 +18,10 @@ var containsDuplicate = function(nums) {
     // store the iteration in the left Pointer variable
     let left = nums[i];
     // create another loop to set right pointer
-    // make sure to use i + 1 and not left + 1
+    // make sure to use i + 1 and not left + 1 because you want to add 1
+    // to the position not the value
     for (let j = i + 1; j<nums.length; j++){
+        // store the right pointer variable
         let right = nums[j]
         if(left === right){
             return true
