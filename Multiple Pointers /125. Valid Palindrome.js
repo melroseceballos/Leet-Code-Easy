@@ -6,4 +6,19 @@ return true if it is a palindrome,
 or false otherwise. **/
 
 
-// MY SOLUTION:
+// MY SOLUTION: #1
+isPalindrome = (str) => {
+for (let i = 0; i<str.length; i++){
+	let outer = str[i]
+  for(let j = str.length -1; j>str.length; j--){
+    let inner = str[j]  
+    if(outer === inner){
+		return true
+}
+  }
+}
+    return false
+}
+
+
+// MY SOLUTION: #2
