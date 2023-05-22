@@ -22,19 +22,20 @@ for (let i = 0; i<str.length; i++){
 
 
 // CORRECT SOLUTION
-isPalindrome = (str) => {
-let left = 0
-let right = str.length - 1
-while(left<right){
-  if(str[left] !== str[right]){
-    return false
+var isPalindrome = function(s) {
+  s = s.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  let left = 0;
+  let right = s.length - 1;
+  while (left < right) {
+    if (s[left] !== s[right]) {
+      return false;
+    }
+    left++;
+    right--;
   }
-	left++
-	right--
-}
-  return true
-}
-console.log(isPalindrome("raceacar"));  // true
-console.log(isPalindrome("amanaplanacanalpanama"));  // true
-console.log(isPalindrome("paste"));
-console.log(isPalindrome(""));
+  return true;
+};
+
+console.log(isPalindrome("A man, a plan, a canal: Panama"));  // true
+
+// always check for constraints like having to use .toLowerCase()
