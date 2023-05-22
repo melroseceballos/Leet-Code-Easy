@@ -21,4 +21,20 @@ for (let i = 0; i<str.length; i++){
 }
 
 
-// MY SOLUTION: #2
+// CORRECT SOLUTION
+isPalindrome = (str) => {
+let left = 0
+let right = str.length - 1
+while(left<right){
+  if(str[left] !== str[right]){
+    return false
+  }
+	left++
+	right--
+}
+  return true
+}
+console.log(isPalindrome("raceacar"));  // true
+console.log(isPalindrome("amanaplanacanalpanama"));  // true
+console.log(isPalindrome("paste"));
+console.log(isPalindrome(""));
