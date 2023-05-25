@@ -22,3 +22,36 @@ heightChecker = (arr) => {
   return count;
 }
 console.log(heightChecker([1, 1, 4, 2, 1, 3]));
+
+// CORRECT SOLUTION w/ pivot
+const partition = (arr, low, high) => {
+  let pivot = arr[low];
+  let i = low + 1;
+  for (let j = low + 1; j <= high; j++) {
+    if (arr[j] < pivot) {
+      [arr[j], arr[i]] = [arr[i], arr[j]];
+      i++;
+    }
+  }
+  [arr[low], arr[i - 1]] = [arr[i - 1], arr[low]];
+  return i - 1;
+};
+const quickSort = (arr, low, high) => {
+  if (low < high) {
+    let pivotIndex = partition(arr, low, high);
+    quickSort(arr, low, pivotIndex - 1);
+    quickSort(arr, pivotIndex + 1, high);
+  }
+};
+heightChecker = (arr) => {
+  quickSort(arr, 0, arr.length - 1);
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== i + 1) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(heightChecker([1, 1, 4, 2, 1, 3]));
