@@ -15,11 +15,16 @@ heightChecker = (arr) => {
   let sortedArr = [...arr].sort((a, b) => a - b); // Create a sorted version of the array
   //store outliers
   let count = 0;
+  // loops through the array
   for (let i = 0; i < arr.length; i++) {
+    // checks if the current iteration
+    // is the same as the sorted one
     if (arr[i] !== sortedArr[i]) {
+      // if not, it adds it to the outliers variable
       count++;
     }
   }
+  //and then returns them
   return count;
 }
 console.log(heightChecker([1, 1, 4, 2, 1, 3]));
