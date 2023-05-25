@@ -5,8 +5,6 @@ Let this ordering be represented by the integer array expected where expected[i]
 You are given an integer array heights representing the current order that the students are standing in. Each heights[i] is the height of the ith student in line (0-indexed).
 Return the number of indices where heights[i] != expected[i].
 **/
- 
-
 
 
 
@@ -15,6 +13,7 @@ heightChecker = (arr) => {
   // using the spread operagor to make new array
   // also using .sort method into an ascending order
   let sortedArr = [...arr].sort((a, b) => a - b); // Create a sorted version of the array
+  //store outliers
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== sortedArr[i]) {
