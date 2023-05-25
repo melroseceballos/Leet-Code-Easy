@@ -11,3 +11,14 @@ Return the number of indices where heights[i] != expected[i].
 
 
 // CORRECT SOLUTION
+heightChecker = (arr) => {
+  let sortedArr = [...arr].sort((a, b) => a - b); // Create a sorted version of the array
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== sortedArr[i]) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(heightChecker([1, 1, 4, 2, 1, 3]));
