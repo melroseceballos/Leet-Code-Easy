@@ -12,6 +12,8 @@ Return the number of indices where heights[i] != expected[i].
 
 // CORRECT SOLUTION
 heightChecker = (arr) => {
+  // using the spread operagor to make new array
+
   let sortedArr = [...arr].sort((a, b) => a - b); // Create a sorted version of the array
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -22,6 +24,8 @@ heightChecker = (arr) => {
   return count;
 }
 console.log(heightChecker([1, 1, 4, 2, 1, 3]));
+
+
 
 // CORRECT SOLUTION w/ pivot
 const partition = (arr, low, high) => {
