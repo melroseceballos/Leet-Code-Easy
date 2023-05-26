@@ -4,6 +4,13 @@ return the third distinct maximum number in this array.
 If the third maximum does not exist, return the maximum number.
 **/
 
+/** REFLECTION:
+*
+*
+*
+*
+*/
+
 // CORRECT SOLUTION:
 let thirdMax = function(nums) {
     // Sort the array in non-increasing order.
