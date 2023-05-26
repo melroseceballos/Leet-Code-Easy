@@ -10,6 +10,16 @@ thirdDis = (arr) => {
     let high = Math.max(...arr)
     return high
   }
+for (let i = 0; i < arr.length; i++) {
+    let current = arr[i];
+    if (!number.includes(current)) {
+      distinctCount++;
+      number.push(current);
+      if (distinctCount === 3) {
+        return current;
+      }
+    }
+  }
   return null
 }
 
