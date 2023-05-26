@@ -31,7 +31,7 @@ for (let i = 0; i < arr.length; i++) {
       }
     }
   }
-  // 
+  // if none are true, returning null
   return null
 }
 
