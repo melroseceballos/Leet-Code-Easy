@@ -23,6 +23,8 @@ for (let i = 0; i < arr.length; i++) {
 // to keep track of distinct values
       distinctCount++;
       number.push(current);
+      // if the number of distinct count has reached 3
+// it returns the last number to be added which is the 3rd
       if (distinctCount === 3) {
         return current;
       }
