@@ -24,12 +24,14 @@ for (let i = 0; i < arr.length; i++) {
       distinctCount++;
       number.push(current);
       // if the number of distinct count has reached 3
-// it returns the last number to be added which is the 3rd
+// it returns the last number to be added 
+// which is the 3rd distinct number
       if (distinctCount === 3) {
         return current;
       }
     }
   }
+  // 
   return null
 }
 
