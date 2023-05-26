@@ -18,9 +18,9 @@ for (let i = 0; i < arr.length; i++) {
     let current = arr[i];
     // if the current iteration is not in the
  // new array, then add it in
-// and then add 1 to distint count 
-// to keep track of distinct values
     if (!number.includes(current)) {
+      // and then add 1 to distint count 
+// to keep track of distinct values
       distinctCount++;
       number.push(current);
       if (distinctCount === 3) {
