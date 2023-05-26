@@ -25,7 +25,10 @@ let thirdMax = function(nums) {
     return nums[0];
 };
  
-// MY SOLUTION:
+
+
+
+// MY SOLUTION: (compare/contrast)
 thirdDis = (arr) => {
   let distinctCount = 0;
   let number = [];
