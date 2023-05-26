@@ -5,7 +5,8 @@ If the third maximum does not exist, return the maximum number.
 **/
 
 /** REFLECTION:
-*
+* worked on this for 2 hours
+* learned spread operator w/ Math.max
 *
 *
 *
