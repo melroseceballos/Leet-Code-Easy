@@ -6,6 +6,8 @@ If the third maximum does not exist, return the maximum number.
  
 // MY SOLUTION:
 thirdDis = (arr) => {
+  let distinctCount = 0;
+  let number = [];
   if (arr.length <= 2) {
     let high = Math.max(...arr)
     return high
